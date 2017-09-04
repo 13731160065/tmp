@@ -1,5 +1,21 @@
+<!DOCTYPE html>
 <html>
-	<body>
-		bbbbbbbbbb
-	</body>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=XXXXXXXXXXXXX" type="text/javascript"></script>
+</head>
+<body>
+    <div style="width: 100%;text-align: center;height: 50px;background-color: #ddd;">这是中文</div>
+    <div style="width: 100%;text-align: center;height: 50px;background-color: #eee;">这是中文</div>
+    <div id="allmap" style="background-color: red;"></div>
+    <script type="text/javascript">
+        var height = $(window).height()-100;
+        $("#allmap").css("height",height+"px");
+        var map = new BMap.Map("allmap");
+        map.centerAndZoom(new BMap.Point(121.491, 31.233), 11);
+    </script>
+</body>
 </html>
